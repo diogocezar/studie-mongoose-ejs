@@ -14,7 +14,6 @@ const loadJson = async () => {
 
 const fillList = async () => {
   const data = await loadJson()
-  console.log(data)
   list.insertAdjacentHTML('beforeend', data.map((item) => (
     `<tr>
       <th scope="row">${item._id}</th>
@@ -25,7 +24,7 @@ const fillList = async () => {
       <td><button type="submit" class="btn btn-primary">X</button></td>
       <td><button type="submit" class="btn btn-primary">~</button></td>
     </tr>`
-  )))
+  )).join(''))
 }
 
 fillList()

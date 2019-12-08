@@ -23,7 +23,6 @@ const index = async (req, res) => {
 }
 
 const create = async (req, res) => {
-    console.log(req.body)
     try{
         const result = await Contact.create(req.body)
         if(result)
